@@ -2,7 +2,7 @@
   "expo": {
     "name": "ImgDet",
     "slug": "ImgDet",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,16 +18,31 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.asbj.ImgDet",
+      "infoPlist": {
+      "NSCameraUsageDescription": "This app uses the camera for video processing.",
+      "NSMicrophoneUsageDescription": "This app uses the microphone for voice processing."
+
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.asbj.ImgDet"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "react-native-pytorch-core"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "62fd6c6d-7f8a-43ae-9ae9-8f5632aef9d1"
+      }
     }
   }
 }
